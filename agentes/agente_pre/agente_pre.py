@@ -10,5 +10,8 @@ class AgentePre:
         :param texto_bruto: Texto original da transcrição ou comando.
         :return: Texto limpo e padronizado.
         """
-        # TODO: Implementar limpeza real
-        return texto_bruto.strip()
+        import re
+        texto = texto_bruto.lower()
+        texto = re.sub(r'[^\w\s]', '', texto)  # Remove pontuação
+        texto = re.sub(r'\s+', ' ', texto)      # Remove múltiplos espaços
+        return texto.strip()

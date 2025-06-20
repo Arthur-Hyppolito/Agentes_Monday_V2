@@ -10,5 +10,8 @@ class AgenteValidador:
         :param dados_semi: Dict semi-estruturado do AgenteAnalista.
         :return: Dict validado ou sinalização de intervenção.
         """
-        # TODO: Implementar validação real
-        return {"validado": True, **dados_semi}
+        if dados_semi.get("entidades") and dados_semi.get("intencoes"):
+            return {"validado": True, **dados_semi}
+        else:
+            return {"necessita_intervencao": True, "mensagem": "Entidades ou intenções insuficientes para prosseguir.", **dados_semi}
+

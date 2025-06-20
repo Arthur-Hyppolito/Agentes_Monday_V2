@@ -9,5 +9,9 @@ class AgenteMapeaMonday:
         :param dados_validados: Dict validado pelo AgenteValidador.
         :return: Payload pronto para decisão de rota.
         """
-        # TODO: Implementar mapeamento real
-        return {"payload": dados_validados}
+        payload = {
+            "acao": dados_validados.get("intencoes", [None])[0],
+            "entidades": dados_validados.get("entidades", [])
+        }
+        return payload
+

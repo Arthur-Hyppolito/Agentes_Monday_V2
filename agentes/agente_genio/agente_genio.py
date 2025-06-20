@@ -9,5 +9,5 @@ class AgenteGenio:
         :param payload: Payload mapeado pelo AgenteMapeaMonday.
         :return: (rota: str, payload_final: dict)
         """
-        # TODO: Implementar lógica de decisão real
         return ("MCP", payload)
+

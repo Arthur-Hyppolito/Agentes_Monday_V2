@@ -9,5 +9,5 @@ class AgenteBoss:
         :param texto_bruto: Texto original processado.
         :param resultado_execucao: Resultado da execução final.
         """
-        # TODO: Implementar registro real
-        pass
+        print(f"[BOSS] Feedback registrado para texto: '{texto_bruto[:30]}...' e resultado: {resultado_execucao}")
+
